@@ -24,39 +24,33 @@ export function extend (to, from) {
     return to;
 }
 
-var toString = Object.prototype.toString
+let toString = Object.prototype.toString;
 
-
-export  function isArray(unknow) {
-  return toString.call(unknow) === '[object Array]'
+export function isArray(unknow) {
+    return toString.call(unknow) === '[object Array]';
 }
 
-
-export  function isPlainObject (obj) {
-  return toString.call(obj) === '[object Object]'
+export function isPlainObject(obj) {
+    return toString.call(obj) === '[object Object]';
 }
 
-
-export  function isObject( unknow ) {
-  return typeof unknow === "function" || ( typeof unknow === "object" && unknow != null )
+export function isObject(unknow) {
+    return typeof unknow === "function" || ( typeof unknow === "object" && unknow != null );
 }
 
-
-export  function isElement(unknow){
-  return unknow && typeof unknow === 'object' && unknow.nodeType
+export function isElement(unknow){
+    return unknow && typeof unknow === 'object' && unknow.nodeType;
 }
 
-
-export  function isString(unknow){
-  return (Object.prototype.toString.call(unknow) === '[object String]')
+export function isString(unknow){
+    return toString.call(unknow) === '[object String]';
 }
 
-
-export  function isNumber(unknow){
-  return (Object.prototype.toString.call(unknow) === '[object Number]')
+export function isNumber(unknow){
+    return toString.call(unknow) === '[object Number]';
 }
 
-function isNative (Ctor) {
+export function isNative (Ctor) {
     return /native code/.test(Ctor.toString());
 }
 

@@ -10,7 +10,7 @@ export const prefix = 's';
  * 当前版本号
  * @type {String}
  */
-export const version = '0.1';
+export const version = '0.1.0';
 
 
 /**
